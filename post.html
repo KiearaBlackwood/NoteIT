@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/styles.css">
+        <title>Post: {{p["UserName"]}}</title>
+    </head>
+    <body>
+        <div class="nav" style="text-align: center; padding: 20px; background-color: white; margin-bottom: 10px;">
+             <a href="/home.html">Home</a> |
+             <a href="/feed.html">Feed</a> |
+             <a href="/logout.html">Logout</a>
+        </div>
+
+        <div class="post_container">
+            <div class="course_container">
+                <h1 class="course_name">{{p["UserName"]}}</h1>
+                <p class="course_description">{{p["Text"]}}</p>
+                <span class="course_credits">{{p["Date"]}}</span>
+            </div>
+
+            <hr>
+
+            <div class="course_container" style="border: 2px solid purple;">
+                <h2>Reply to Post</h2>
+                <input type="hidden" id="postid" value="{{p["PostID"]}}">
+                <textarea id="comment" placeholder="Write your reply..." style="width: 100%; height: 60px;"></textarea>
+                <br/>
+                <button onclick="addreply('{{p["PostID"]}}');" style="margin-top: 10px;">Post Reply</button>
+            </div>
+
+            <h2 style="color: black; margin-top: 30px;">Replies: </h2>
+            <div id="divReplies"></div>
+        </div>
+
+        <script src="/static/script.js"></script>
+        <script>
+            listreplies('{{p["PostID"]}}');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/styles.css">
+        <title>Login</title>
+    </head>
+    <body>
+        <div class="auth-container">
+            <h1>NoteIT</h1>
+
+            <div class="auth-box">
+                <h2>Login</h2>
+                <div>
+                    Email:<br/>
+                    <input type="text" id="txtEmail"><br/>
+
+                    Password:<br/>
+                    <input type="password" id="txtPassword"><br/>
+
+                    <div style="margin-bottom: 10px;">
+                        <input type="checkbox" id="chkRemember"> Remember Me
+                    </div>
+                    <br/>
+                    <button onclick="login();">Login</button>
+
+                    <p>Don't have an account? <a href="/signup.html">Sign up here</a></p>
+                </div>
+            </div>
+        </div>
+
+       <script src="/static/script.js"></script>
+    </body>
+</html>

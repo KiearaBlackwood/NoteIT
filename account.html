@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/styles.css">
+        <title>Account: {{ username }}</title>
+    </head>
+    <body>
+        <div class="nav" style="text-align: center; padding: 20px; background-color: white; margin-bottom: 10px;">
+             <a href="/home.html">Home</a> |
+             <a href="/feed.html">Feed</a> |
+             <a href="/logout.html">Logout</a>
+        </div>
+
+        <div class="post_container">
+
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h1 class="course_name" style="font-size: 32px;">{{ username }}'s Profile</h1>
+
+                <img src="https://s3.amazonaws.com/kblackwood-web-public/{{ profilepic }}"
+                     class="profile-pic" style="width:250px;"
+                     alt="Profile Picture">
+            </div>
+
+            <hr>
+
+            <h2 style="color: black;">Recent Post</h2>
+
+            <div id="divPost"></div>
+        </div>
+
+        <script src="/static/script.js"></script>
+        <script>
+            loadPost('{{ username }}');
+        </script>
+    </body>
+</html>

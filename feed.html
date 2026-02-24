@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/styles.css">
+        <title>Feed</title>
+    </head>
+    <body>
+        <div class="nav" style="text-align: center; padding: 20px; background-color: white; margin-bottom: 10px;">
+             <a href="/home.html">Home</a> |
+             <a href="/account.html">Account</a> |
+             <a href="/logout.html">Logout</a>
+        </div>
+
+        <div class="post_container">
+            <h1 style="text-align: center; color: black;">Recent Feed</h1>
+
+            <div id="divPost"></div>
+        </div>
+
+        <script src="/static/script.js"></script>
+        <script>
+            listfeed();
+        </script>
+    </body>
+</html>
